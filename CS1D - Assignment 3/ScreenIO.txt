@@ -1,0 +1,44 @@
+***************************************************************************
+*  PROGRAMMED BY : Elva Nguyen
+*  CLASS         : CS1D
+*  SECTION       : T-Th: 5:30 - 9:20p
+*  ASSIGNMENT #3 : Stack and Deque
+***************************************************************************
+
+Part 1: Stack using vector
+
+Stack 1 is: 
+Eric Paul Mark Jack JoAnn Paula 
+Stack 2 is: 
+12.4 19833.1 8445.56 243.76 2788.12 
+Stack 3 is: 
+354 12 9833 8445 123 88 88 98 
+***************************************************************************
+Part 2: Stack using Singly Linked List
+
+Stack 1 is: 
+Eric Paul Mark Jack JoAnn Paula 
+Stack 2 is: 
+12.4 19833.1 8445.56 243.76 2788.12 
+Stack 3 is: 
+354 12 9833 8445 123 88 88 98 
+***************************************************************************
+Part 3: Deque Using Link List
+
+deque 1 is: 
+Eric Paul Mark Jack JoAnn Paula 
+deque 2 is: 
+12.4 19833.1 8445.56 243.76 2788.12 
+deque 3 is: 
+354 12 9833 8445 123 88 88 98 
+***************************************************************************
+Part 4: Parentheses Algorithm
+
+{(8x+5) - 9x[9x+3]] does not match
+(((8x+5) - x[9x+3]))) does not match
+{(8x+5) - 5x[9x+3]}) does not match
+[(8x+5) - 4x[9x+3]] match
+[(8x+5) - 4x[9x+3]] = -915
+{2x + 5) (6x+4)} does not match
+{2x+3}{7x+8} match
+{2x+3}{7x+8} = 559

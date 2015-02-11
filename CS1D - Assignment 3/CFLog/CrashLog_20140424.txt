@@ -1,0 +1,4 @@
+22-25-37-414 : CRASH DUMP - START - CODE : C0000005
+22-25-38-534 : CRASH DUMP - MiniDumpWriteDump Fail
+22-25-38-536 : CRASH DUMP - closehandle end
+22-25-38-670 : CRASH DUMP - ChangeDisplaySettings end
