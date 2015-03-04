@@ -1,3 +1,11 @@
+/**************************************************************************
+ * AUTHOR     	: Elva Nguyen
+ * STUDENT ID 	: 366160
+ * ASSIGNMENT #6: Priority Queue
+ * CLASS      	: Computer Science 1D
+ * SECTION    	: T - Th 5:30 - 9:20pm
+ * DUE DATE   	: 3/3/15
+ *************************************************************************/
 #ifndef PATIENT_H_
 #define PATIENT_H_
 #include <string>

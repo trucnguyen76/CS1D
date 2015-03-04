@@ -1,3 +1,11 @@
+/**************************************************************************
+ * AUTHOR     	: Elva Nguyen
+ * STUDENT ID 	: 366160
+ * ASSIGNMENT #6: Priority Queue
+ * CLASS      	: Computer Science 1D
+ * SECTION    	: T - Th 5:30 - 9:20pm
+ * DUE DATE   	: 3/3/15
+ *************************************************************************/
 #include "Patient.h"
 
 Patient::Patient()
@@ -75,14 +83,15 @@ int 	 Patient::operator ==  (const Patient& otherPatient) const
 
 void Patient::print()			const
 {
-	cout << "Patient: "<< name << " - ";
-
-	if(hoursWaiting == EMERGENCY)
-	{
-		cout << "EMERGENCY";
-	}
-	else
-	{
-		cout << hoursWaiting;
-	}
+	cout << "Patient: "<< name;
+//	cout << " - ";
+//
+//	if(hoursWaiting == EMERGENCY)
+//	{
+//		cout << "EMERGENCY";
+//	}
+//	else
+//	{
+//		cout << hoursWaiting;
+//	}
 }
