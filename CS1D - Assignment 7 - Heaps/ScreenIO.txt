@@ -1,0 +1,55 @@
+***************************************************************************
+*  PROGRAMMED BY : Elva Nguyen
+*  CLASS         : CS1D
+*  SECTION       : T-Th: 5:30 - 9:20p
+*  ASSIGNMENT #7 : Heaps
+***************************************************************************
+
+Inserting 67
+Heap 1 is: 67	
+Heap 2 is: 67	
+Inserting 88
+Heap 1 is: 67	88	
+Heap 2 is: 67	88	
+Inserting 77
+Heap 1 is: 67	88	77	
+Heap 2 is: 67	88	77	
+Inserting 52
+Heap 1 is: 52	67	77	88	
+Heap 2 is: 52	67	77	88	
+Inserting 44
+Heap 1 is: 44	52	77	88	67	
+Heap 2 is: 44	52	77	88	67	
+Inserting 11
+Heap 1 is: 11	52	44	88	67	77	
+Heap 2 is: 11	52	44	88	67	77	
+Inserting 66
+Heap 1 is: 11	52	44	88	67	77	66	
+Heap 2 is: 11	52	44	88	67	77	66	
+Inserting 93
+Heap 1 is: 11	52	44	88	67	77	66	93	
+Heap 2 is: 11	52	44	88	67	77	66	93	
+Removing 11
+Heap 1 is: 44	52	66	88	67	77	93	
+Heap 2 is: 44	52	66	88	67	77	93	
+Removing 44
+Heap 1 is: 52	67	66	88	93	77	
+Heap 2 is: 52	67	66	88	93	77	
+Removing 52
+Heap 1 is: 66	67	77	88	93	
+Heap 2 is: 66	67	77	88	93	
+Removing 66
+Heap 1 is: 67	88	77	93	
+Heap 2 is: 67	88	77	93	
+Removing 67
+Heap 1 is: 77	88	93	
+Heap 2 is: 77	88	93	
+Removing 77
+Heap 1 is: 88	93	
+Heap 2 is: 88	93	
+Removing 88
+Heap 1 is: 93	
+Heap 2 is: 93	
+Removing 93
+Heap 1 is: Heap is empty. There is nothing to print
+Heap 2 is: Heap is empty. There is nothing to print

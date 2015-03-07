@@ -1,0 +1,374 @@
+#ifndef PRIORITY_QUEUES_H_
+#define PRIORITY_QUEUES_H_
+
+#include <iostream>
+#include <iomanip>
+#include <vector>
+
+using namespace std;
+
+template <class Type>
+struct Node
+{
+	Type object;
+	Node<Type>* parent;
+	Node<Type>* left;
+	Node<Type>* right;
+};
+
+template <class Type>
+class PriorityQueue : public vector<Node<Type> >
+{
+public:
+	PriorityQueue();
+
+	PriorityQueue(const PriorityQueue& anotherQueue);
+
+	~PriorityQueue();
+
+    bool isEmpty() const;
+      //Function to determine whether the binary tree is empty.
+      //Postcondition: Returns true if the binary tree is empty;
+      //               otherwise, returns false.
+
+//    void destroyTree();
+//      //Function to destroy the binary tree.
+//      //Postcondition: Memory space occupied by each node
+//      //               is deallocated.
+//      //               root = NULL;
+
+    bool search(const Type& searchItem) const ;
+      //Function to determine if searchItem is in the binary
+      //tree.
+      //Postcondition: Returns true if searchItem is found in
+      //               the binary tree; otherwise, returns
+      //               false.
+
+    void insert(const Type& insertItem);
+      //Function to insert insertItem in the binary tree.
+      //Postcondition: If there is no node in the binary tree
+      //               that has the same object as insertItem, a
+      //               node with the object insertItem is created
+      //               and inserted in the binary search tree.
+
+    void deleteItem(const Type& deleteItem);
+      //Function to delete deleteItem from the binary tree
+      //Postcondition: If a node with the same object as
+      //               deleteItem is found, it is deleted from
+      //               the binary tree.
+      //               If the binary tree is empty or
+      //               deleteItem is not in the binary tree,
+      //               an appropriate message is printed.
+
+    Type getItem(int index) const;
+    Type min()	const;
+    Type removeMin();
+
+    void print() const;
+
+    int size() const;
+
+    void preorder (Node<Type> *p) const;
+
+protected:
+    Node<Type>& at(int index);
+
+private:
+    void copyTree(Node<Type>* &copiedTreeRoot,
+                  Node<Type>* otherTreeRoot);
+      //Makes a copy of the binary tree to which
+      //otherTreeRoot points.
+      //Postcondition: The pointer copiedTreeRoot points to
+      //               the root of the copied binary tree.
+
+//    void destroy(Node<Type>* &p);
+//      //Function to destroy the binary tree to which p points.
+//      //Postcondition: Memory space occupied by each node, in
+//      //               the binary tree to which p points, is
+//      //               deallocated.
+//      //               p = NULL;
+};
+template <class Type>
+PriorityQueue<Type>::PriorityQueue() : vector<Node<Type> >::vector(){}
+
+template <class Type>
+PriorityQueue<Type>::PriorityQueue(const PriorityQueue& anotherQueue)
+				: vector<Node<Type> >::vector(anotherQueue){}
+
+template <class Type>
+PriorityQueue<Type>::~PriorityQueue()
+{
+//	destroyTree();
+	vector<Node<Type> >::~vector();
+}
+
+template <class Type>
+bool PriorityQueue<Type>::isEmpty() const
+{
+    return size() == 0;
+}
+
+template <class Type>
+Type PriorityQueue<Type>::getItem(int index) const
+{
+	return vector<Node<Type> >::at(index).object;
+}
+
+template <class Type>
+int PriorityQueue<Type>::size() const
+{
+	return vector<Node<Type> >::size();
+}
+
+//template <class Type>
+//void PriorityQueue<Type>::inorderTraversal() const
+//{
+//    inorder(root);
+//}
+//
+//template <class Type>
+//void PriorityQueue<Type>::preorderTraversal() const
+//{
+//    preorder(root);
+//}
+//
+//template <class Type>
+//void PriorityQueue<Type>::postorderTraversal() const
+//{
+//    postorder(root);
+//}
+
+template <class Type>
+Node<Type>& PriorityQueue<Type>:: at(int index)
+{
+	return vector<Node<Type> >::at(index);
+}
+
+template <class Type>
+void PriorityQueue<Type>::insert(const Type& insertItem)
+{
+	Node<Type>* insertNode = new Node<Type>;
+	Node<Type>* emptyNode  = new Node<Type>;
+	int newItemIndex;
+	int parentIndex;
+
+	insertNode->object 	= insertItem;
+	insertNode->left   	= NULL;
+	insertNode->right   = NULL;
+	insertNode->parent  = NULL;
+
+	//If empty, create an empty node at index 0 cuz queue starts at 1
+	if(isEmpty())
+	{
+		vector<Node<Type> >::push_back(*emptyNode);
+	}
+
+	vector<Node<Type> >::push_back(*insertNode);
+	//New item will always be added to the end of the vector
+	newItemIndex = size() - 1;
+
+	parentIndex = newItemIndex / 2;
+	//Assign the parent pointer
+	at(newItemIndex).parent = &(at(parentIndex));
+	//If newItemIndex is odd -> the node is on the right
+	if(newItemIndex % 2 == 1)
+	{
+		at(parentIndex).right = &(at(newItemIndex));
+	}
+	else
+	{
+		at(parentIndex).left = &(at(newItemIndex));
+	}
+
+	//If the insert element is less than its parent -> higher priority
+	while(newItemIndex > 1 && insertItem < at(parentIndex).object)
+	{
+		at(newItemIndex).object = at(parentIndex).object;
+		at(parentIndex).object  = insertItem;
+
+		newItemIndex = parentIndex;
+
+		parentIndex /= 2;
+
+	}
+	insertNode = NULL;
+}
+
+template <class Type>
+Type PriorityQueue<Type>::min()	const
+{
+	if(!isEmpty())
+	{
+		//Use vector const_reference at() const function
+		return vector<Node<Type> >::at(1).object;
+	}
+	else
+	{
+		cout << "Queue is empty. There is no min\n";
+		return Type();
+	}
+}
+
+template <class Type>
+Type PriorityQueue<Type>::removeMin()
+{
+	class vector<Node<Type> >::iterator vectorIt;
+	Type minObject;
+	Type movingItem;
+	int lastIndex;
+	int currentIndex;
+	int parentIndex;
+
+
+	lastIndex = size() - 1;
+
+	//Swap the element
+	if(!isEmpty())
+	{
+cout << "In If !isEmpty()\n";
+cin.ignore(1000, '\n');
+
+		minObject = min();
+		vector<Node<Type> >::at(1).object =
+									vector<Node<Type> >::at(lastIndex).object;
+
+cout << "Before delete the last node\n";
+cin.ignore(1000, '\n');
+		//Delete the last node of the heap
+		parentIndex = lastIndex / 2;
+		if(lastIndex % 2 == 1)
+		{
+			at(parentIndex).right = NULL;
+		}
+		else
+		{
+			at(parentIndex).left = NULL;
+		}
+
+		vectorIt = vector<Node<Type> >::end();
+		vectorIt--;
+		vector<Node<Type> >::erase(vectorIt);
+
+cout << "After delete the last node\n";
+cin.ignore(1000, '\n');
+
+print();
+cin.ignore(1000, '\n');
+
+		movingItem = min();
+
+cout << "MovingItem: " << movingItem;
+cout << endl;
+cin.ignore(1000, '\n');
+		currentIndex = 1;
+		//Reorder the heap
+		/*No need to check if at currentIndex is NULL cuz if left and right is
+		 * 	not NULL, there is no way currentIndex is NULL */
+cout << "at(currentIndex).left != NULL && at(currentIndex).right != NULL is " <<  (at(currentIndex).left != NULL && at(currentIndex).right != NULL) << "\n";
+
+cout << "at(currentIndex).left->object < movingItem is " <<  (at(currentIndex).left->object < movingItem) << "\n";
+
+cout << "at(currentIndex).right->object < movingItem is " <<  (at(currentIndex).right->object < movingItem) << "\n";
+cout << "Object is: " 	<< (at(currentIndex).object) << "\n";
+cout << "Left is: " 	<< (at(currentIndex).left->object) << "\n";
+cout << "Right is: " 	<< (at(currentIndex).right->object) << "\n";
+
+		while(at(currentIndex).left != NULL && at(currentIndex).right != NULL &&
+			 (at(currentIndex).left->object < movingItem &&
+			  at(currentIndex).right->object < movingItem))
+		{
+
+			//If left < right -> swap left with parent
+			if(at(currentIndex).left->object < at(currentIndex).right->object)
+			{
+				at(currentIndex).object = at(currentIndex).left->object;
+				at(currentIndex).left->object = movingItem;
+
+				currentIndex *= 2;
+			}
+			else
+			{
+				at(currentIndex).object = at(currentIndex).right->object;
+				at(currentIndex).right->object = movingItem;
+
+				currentIndex *= 2 + 1;
+			}
+cout << "end one iteration of while loop.\n Heap is now: \n";
+print();
+cin.ignore(1000, '\n');
+		}
+		/*When the while loop exits, there are a few possibilities:
+		 * 	The object on the left is NULL
+		 * 		-> the currentNode is external -> nothing else to do
+		 * 	The object on the right is NULL
+		 * 		-> compare left w moving object. If not in order -> swap
+		 * 	The object on the left is  > movingItem
+		 * 		-> swap with left
+		 * 	The object on the right is > movingItem
+		 * 		-> swap with right
+		 */
+		if(at(currentIndex).right == NULL)
+		{
+			if(at(currentIndex).left->object < movingItem)
+			{
+				at(currentIndex).object = at(currentIndex).left->object;
+				at(currentIndex).left->object = movingItem;
+			}
+		}
+		else if(at(currentIndex).left->object > movingItem)
+		{
+			at(currentIndex).object = at(currentIndex).left->object;
+			at(currentIndex).left->object = movingItem;
+		}
+		else if(at(currentIndex).right->object > movingItem)
+		{
+			at(currentIndex).object = at(currentIndex).right->object;
+			at(currentIndex).right->object = movingItem;
+		}
+	}
+	else
+	{
+		cout << "Queue is empty. There is no min\n";
+		minObject = Type();
+	}
+
+	return minObject;
+}
+
+template <class Type>
+void PriorityQueue<Type>::print() const
+{
+	int index;
+
+	for(index = 1; index < size(); index++)
+	{
+		cout << vector<Node<Type> >::at(index).object;
+		cout << "Left of " << vector<Node<Type> >::at(index).object << " is " << vector<Node<Type> >::at(index).left->object;
+		cout << endl;
+		cout << "Right of " << vector<Node<Type> >::at(index).object << " is " << vector<Node<Type> >::at(index).right->object;
+		cout << endl;
+	}
+	cout << endl;
+
+	cout << "Preorder print: \n";
+	cout << endl;
+
+
+}
+
+//template <class Type>
+//void PriorityQueue<Type>::preorder
+//                              (Node<Type> *p) const
+//{
+//    if (p != NULL)
+//    {
+//        cout << p->object << " ";
+//        cout << "Left of " << p->object << " is: ";
+//        preorder(p->left);
+//
+//        cout << "Right of " << p->object << " is: ";
+//        preorder(p->right);
+//    }
+//}
+#endif
+
