@@ -66,7 +66,7 @@ public:
     Type min();
 
     /*************************************************************************
-     * size
+     * getSize
      *		This method returns the size of the queue
      *		-> RETURN the size of the queue as an integer
      ************************************************************************/
@@ -74,12 +74,18 @@ public:
 
     /*****************************************************************************
     * removeMin()
-    * 	This method will remove the first item of the list
+    * 	This method will remove the min item of the list
     * 	-> Return the deleteItem through the parameter
-    * 	POST:	the first item is removed from the list
+    * 	POST:	the min item is removed from the list
     *****************************************************************************/
     void removeMin(Type& deleteItem);	//OUT - The item being deleted
 
+    /*****************************************************************************
+    * print()
+    * 	This method will output the vector queue
+    * 	-> Return nothing
+    * 	POST:	the queue is outputted
+    *****************************************************************************/
     void print();
 
 };

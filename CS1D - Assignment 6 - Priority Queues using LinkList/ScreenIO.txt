@@ -1,0 +1,79 @@
+***************************************************************************
+*  PROGRAMMED BY : Elva Nguyen
+*  CLASS         : CS1D
+*  SECTION       : T-Th: 5:30 - 9:20p
+*  ASSIGNMENT #6 : Priority Queue
+***************************************************************************
+
+PART 1: IMPLEMENTING PRIORITY QUEUE
+
+00:00
+Patient: Frank Feelingbad, please come up
+
+00:30
+Patient: Cathy Coughing, please come up
+
+01:00
+Patient: Sam Sneezing, please come up
+
+01:30
+Patient: Paula Pain, please come up
+
+02:00
+Patient: Sam Sneezing, please come up
+
+02:01
+Patient: Sid Sickly, please come up
+
+02:10
+Patient: Tom Temperature, please come up
+
+02:40
+Patient: Sid Sickly, please come up
+
+03:02
+Patient: Alice, please come up
+
+03:32
+Patient: Bob Bleeding, please come up
+
+04:02
+Patient: Irene Ill, please come up
+
+**************************************************
+
+PART 2: STL PRIORITY QUEUE
+
+00:00
+Patient: Frank Feelingbad, please come up
+
+00:30
+Patient: Cathy Coughing, please come up
+
+01:00
+Patient: Sam Sneezing, please come up
+
+01:30
+Patient: Paula Pain, please come up
+
+02:00
+Patient: Sam Sneezing, please come up
+
+02:01
+Patient: Sid Sickly, please come up
+
+02:10
+Patient: Tom Temperature, please come up
+
+02:40
+Patient: Sid Sickly, please come up
+
+03:02
+Patient: Alice, please come up
+
+03:32
+Patient: Bob Bleeding, please come up
+
+04:02
+Patient: Irene Ill, please come up
+
