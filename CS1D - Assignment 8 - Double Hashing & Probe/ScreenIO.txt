@@ -1,0 +1,239 @@
+***************************************************************************
+*  PROGRAMMED BY : Elva Nguyen
+*  CLASS         : CS1D
+*  SECTION       : T-Th: 5:30 - 9:20p
+*  ASSIGNMENT #8 : Double Hashing
+***************************************************************************
+
+Inserting key 18: 
+Print: 
+Index : 18	18  Laguna Niguel
+Inserting key 41: 
+Print: 
+Index : 3	41  Mission Viejo
+Index : 18	18  Laguna Niguel
+Inserting key 22: 
+Print: 
+Index : 3	41  Mission Viejo
+Index : 15	22  Lake Forest
+Index : 18	18  Laguna Niguel
+Inserting key 44: 
+Print: 
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 15	22  Lake Forest
+Index : 18	18  Laguna Niguel
+Delete key 18: 
+Print: 
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 15	22  Lake Forest
+Inserting key 59: 
+Print: 
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 15	22  Lake Forest
+Inserting key 32: 
+Print: 
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 13	32  San Diego
+Index : 15	22  Lake Forest
+Inserting key 49: 
+Print: 
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 11	49  Anaheim
+Index : 13	32  San Diego
+Index : 15	22  Lake Forest
+Delete key 22: 
+Print: 
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 11	49  Anaheim
+Index : 13	32  San Diego
+Inserting key 73: 
+Print: 
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 11	49  Anaheim
+Index : 13	32  San Diego
+Index : 16	73  Los Angeles
+Inserting key 17: 
+Print: 
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 11	49  Anaheim
+Index : 13	32  San Diego
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Inserting key 77: 
+Print: 
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 11	49  Anaheim
+Index : 13	32  San Diego
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Inserting key 26: 
+Print: 
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 11	49  Anaheim
+Index : 13	32  San Diego
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Delete key 49: 
+Print: 
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 13	32  San Diego
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Inserting key 19: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 13	32  San Diego
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Inserting key 60: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 11	60  Santa Ana
+Index : 13	32  San Diego
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Inserting key 35: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 10	35  Tustin
+Index : 11	60  Santa Ana
+Index : 13	32  San Diego
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Inserting key 52: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 10	35  Tustin
+Index : 11	60  Santa Ana
+Index : 13	32  San Diego
+Index : 14	52  Oceanside
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Inserting key 11: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 4	11  La Jolla
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 10	35  Tustin
+Index : 11	60  Santa Ana
+Index : 13	32  San Diego
+Index : 14	52  Oceanside
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Inserting key 18: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 4	11  La Jolla
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 10	35  Tustin
+Index : 11	60  Santa Ana
+Index : 13	32  San Diego
+Index : 14	52  Oceanside
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Index : 18	18  Del Mar
+Inserting key 22: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 4	11  La Jolla
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 10	35  Tustin
+Index : 11	60  Santa Ana
+Index : 13	32  San Diego
+Index : 14	52  Oceanside
+Index : 15	22  Aliso Viejo
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Index : 18	18  Del Mar
+Inserting key 49: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 4	11  La Jolla
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 8	49  Laguna Beach
+Index : 10	35  Tustin
+Index : 11	60  Santa Ana
+Index : 13	32  San Diego
+Index : 14	52  Oceanside
+Index : 15	22  Aliso Viejo
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Index : 18	18  Del Mar
+Delete key 49: 
+Print: 
+Index : 0	19  Brea
+Index : 1	77  Palms Springs
+Index : 2	59  San Clemente
+Index : 3	41  Mission Viejo
+Index : 4	11  La Jolla
+Index : 6	44  Irvine
+Index : 7	26  Riverside
+Index : 10	35  Tustin
+Index : 11	60  Santa Ana
+Index : 13	32  San Diego
+Index : 14	52  Oceanside
+Index : 15	22  Aliso Viejo
+Index : 16	73  Los Angeles
+Index : 17	17  Orange
+Index : 18	18  Del Mar
