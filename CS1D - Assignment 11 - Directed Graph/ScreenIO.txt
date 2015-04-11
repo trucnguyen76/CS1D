@@ -1,0 +1,35 @@
+***************************************************************************
+*  PROGRAMMED BY : Elva Nguyen
+*  CLASS         : CS1C
+*  SECTION       : TTh: 6:00p - 8:50p
+*  ASSIGNMENT #11: Directed Graph
+***************************************************************************
+
+Depth First Traversal
+Boston
+New York
+Chicago
+Seattle
+San Francisco
+Los Angeles
+Denver
+Atlanta
+Miami
+Houston
+Dallas
+Kansas City
+
+
+Breath First Traversal
+Boston
+New York
+Chicago
+Atlanta
+Seattle
+Miami
+San Francisco
+Denver
+Houston
+Los Angeles
+Dallas
+Kansas City
